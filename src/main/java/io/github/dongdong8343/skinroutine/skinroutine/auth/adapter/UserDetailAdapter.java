@@ -26,7 +26,7 @@ public class UserDetailAdapter implements UserDetails {
 
 	@Override
 	public String getPassword() {
-		return this.member.getPassword();
+		return this.member.getPassword().getPassword();
 	}
 
 	@Override

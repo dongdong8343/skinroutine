@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.annotations.DynamicUpdate;
 
 import io.github.dongdong8343.skinroutine.skinroutine.global.base.BaseTimeEntity;
+import io.github.dongdong8343.skinroutine.skinroutine.member.model.Password;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -49,7 +50,7 @@ public class Member extends BaseTimeEntity {
 	private String email;
 
 	@Column(length = 100, nullable = false)
-	private String password;
+	private Password password;
 
 	@Column(length = 20, nullable = false)
 	private String name;
@@ -69,7 +70,7 @@ public class Member extends BaseTimeEntity {
 	private List<SkinConcern> skinConcerns = new ArrayList<>();
 
 	// 일반 사용자 생성
-	private Member(SkinType skinType, LoginType loginType, List<Role> roles, String email, String password, String name, String nickname,
+	private Member(SkinType skinType, LoginType loginType, List<Role> roles, String email, Password password, String name, String nickname,
 		Boolean isSuspended, Integer warningCount, List<SkinConcern> skinConcerns) {
 		this.skinType = skinType;
 		this.loginType = loginType;
@@ -83,7 +84,7 @@ public class Member extends BaseTimeEntity {
 		this.skinConcerns = skinConcerns;
 	}
 
-	public static Member createMemberByEmail(SkinType skinType, String email, String password, String name, String nickname,
+	public static Member createMemberByEmail(SkinType skinType, String email, Password password, String name, String nickname,
 		List<SkinConcern> skinConcerns) {
 		return new Member(skinType, LoginType.EMAIL, List.of(Role.USER), email, password, name, nickname, DEFAULT_SUSPENDED, DEFAULT_WARNING_COUNT, skinConcerns);
 	}
