@@ -1,11 +1,11 @@
-package io.github.dongdong8343.skinroutine.skinroutine.config.error;
+package io.github.dongdong8343.skinroutine.skinroutine.global.error;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import io.github.dongdong8343.skinroutine.skinroutine.config.error.exception.BusinessBaseException;
+import io.github.dongdong8343.skinroutine.skinroutine.global.error.exception.BusinessBaseException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

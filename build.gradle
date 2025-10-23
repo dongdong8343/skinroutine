@@ -21,6 +21,23 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // 🔹 Validation (회원가입, 입력값 검증)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // 🔹 시큐리티
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+    // 🔹 JWT (인증 토큰)
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    implementation 'io.jsonwebtoken:jjwt-gson:0.12.5'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.12.5'
+
+    // 🔹 p6spy
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
+
+    testImplementation 'org.springframework.security:spring-security-test'
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.mysql:mysql-connector-j'

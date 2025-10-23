@@ -1,4 +1,4 @@
-package io.github.dongdong8343.skinroutine.skinroutine.config.error;
+package io.github.dongdong8343.skinroutine.skinroutine.global.error;
 
 import lombok.AccessLevel;
 import lombok.Getter;

@@ -2,6 +2,7 @@ package io.github.dongdong8343.skinroutine.skinroutine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 public class SkinroutineApplication {

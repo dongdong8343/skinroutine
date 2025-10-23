@@ -1,6 +1,6 @@
-package io.github.dongdong8343.skinroutine.skinroutine.config.error.exception;
+package io.github.dongdong8343.skinroutine.skinroutine.global.error.exception;
 
-import io.github.dongdong8343.skinroutine.skinroutine.config.error.ErrorCode;
+import io.github.dongdong8343.skinroutine.skinroutine.global.error.ErrorCode;
 
 public class BusinessBaseException extends RuntimeException {
 	private final ErrorCode errorCode;
