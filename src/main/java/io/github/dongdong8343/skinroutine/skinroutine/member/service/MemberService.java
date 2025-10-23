@@ -2,6 +2,7 @@ package io.github.dongdong8343.skinroutine.skinroutine.member.service;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import io.github.dongdong8343.skinroutine.skinroutine.member.entity.Member;
 import io.github.dongdong8343.skinroutine.skinroutine.member.model.Password;
@@ -17,6 +18,7 @@ public class MemberService {
 	private final CreateMemberValidate createMemberValidate;
 	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
+	@Transactional
 	public AddMember.Response createMember(AddMember.Request request) {
 		createMemberValidate.validate(request);
 
